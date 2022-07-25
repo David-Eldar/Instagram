@@ -1,7 +1,7 @@
 <template>
   <main class="main-layout-container"></main>
   <section>
-    <post-filter />
+    <!-- <post-filter /> -->
   </section>
   <post-list @removed="removePost" v-if="posts" :posts="posts" />
 </template>
@@ -10,14 +10,13 @@
   import postList from '../cmps/post-list.cmp.vue'
   import postEdit from '../views/post-edit.vue'
   import postDetails from '../views/post-details.vue'
-  import postFilter from '../cmps/post-filter.vue'
+  
 
   export default {
     name: 'PostApp',
     components: {
       postList,
       postEdit,
-      postFilter,
       postDetails,
     },
     data() {

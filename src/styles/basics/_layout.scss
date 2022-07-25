@@ -29,7 +29,12 @@
   }
 }
 
-.header-layput {
+.header-layout {
+  
+  display: flex;
+  position:relative;
+  padding-inline-start: $headerLayoutPadding;
+  padding-inline-end: $headerLayoutPadding;
   
 
   @include for-narrow-layout {
@@ -53,6 +58,7 @@
   margin-inline-start: 20px;
   margin-inline-end: 20px;
 }
+
 
 .card-grid {
   display: grid;

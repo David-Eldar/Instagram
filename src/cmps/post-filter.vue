@@ -1,8 +1,7 @@
 <template>
   <section
-    class="filter-container space-between main-layout-container flex align-center g-1"
-  >
-    <div class="search flex align-center g-1">
+    class="filter-container flex align-center">
+    <div class="search flex align-center">
       <input
         type="text"
         class="input-search"
