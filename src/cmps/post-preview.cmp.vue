@@ -1,9 +1,8 @@
 <template>
-  <div class="market-preview flex space-between">
+  <div class="post-preview flex space-between">
     <div class="info flex">
-      <h5>{{ formatPrice }}</h5>
       <div class="img-placeholder"></div>
-      <h5 class="item-name">{{ market.name }}</h5>
+      <h5 class="item-name">{{ post.txt }}</h5>
     </div>
     <div class="btn-container">
       <button>
@@ -14,8 +13,8 @@
 </template>
 <script>
   export default {
-    name: 'MarketPreview',
-    props: ['market'],
+    name: 'postPreview',
+    props: ['post'],
     emits: ['remove'],
     components: {},
     data() {
@@ -23,13 +22,13 @@
     },
     created() {},
     methods: {
-      removeMarket() {
-        this.$emit('remove', this.market._id)
+      removePost() {
+        this.$emit('remove', this.post._id)
       },
     },
     computed: {
       formatPrice() {
-        return (this.market.price + '').slice(0, 1)
+        return (this.post.price + '').slice(0, 1)
       },
     },
     unmounted() {},

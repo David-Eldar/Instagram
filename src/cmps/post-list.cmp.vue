@@ -1,29 +1,29 @@
 <template>
-  <section class="market-list container-layout column">
-    <market-preview
-      v-for="market in markets"
-      :key="market._id"
-      :market="market"
-      @remove="removeMarket"
+  <section class="post-list container-layout column">
+    <post-preview
+      v-for="post in posts"
+      :key="post._id"
+      :post="post"
+      @remove="removePost"
     />
   </section>
 </template>
 <script>
-  import marketPreview from './market-preview.cmp.vue'
+  import postPreview from './post-preview.cmp.vue'
 
   export default {
-    name: 'MarketList',
-    props: ['markets'],
+    name: 'postList',
+    props: ['posts'],
     emits: ['removed', 'showDetails'],
     components: {
-      marketPreview,
+      postPreview,
     },
     data() {
       return {}
     },
     created() {},
     methods: {
-      removeMarket(projId) {
+      removePost(projId) {
         this.$emit('removed', projId)
       },
     },

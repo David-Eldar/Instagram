@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import marketApp from '../views/market-app.vue';
-import marketDetails from '../views/market-details.vue';
-import marketEdit from '../views/market-edit.vue';
+import postApp from '../views/post-app.vue';
+import postDetails from '../views/post-details.vue';
+import postEdit from '../views/post-edit.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,15 +9,15 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: marketApp,
+      component: postApp,
     },
     {
-      path: '/market/edit/:marketId?',
-      component: marketEdit,
+      path: '/post/edit/:postId?',
+      component: postEdit,
     },
     {
-      path: '/market/:marketId?',
-      component: marketDetails,
+      path: '/post/:postId?',
+      component: postDetails,
     },
   ],
 });

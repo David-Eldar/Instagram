@@ -9,7 +9,7 @@
   import appHeader from './cmps/app-header.vue'
   export default {
     created() {
-      this.$store.dispatch({type: 'loadMarkets'})
+      this.$store.dispatch({type: 'loadPosts'})
     },
     components: {appHeader},
   }

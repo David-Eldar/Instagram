@@ -1,15 +1,15 @@
 <template>
-  <section v-if="marketToEdit" class="center form-center">
+  <section v-if="postToEdit" class="center form-center">
     <h1>{{ formTitle }}</h1>
     <form @submit.prevent="save">
       <div class="inputbox">
-        <input type="text" v-model="marketToEdit.name" placeholder="title" />
+        <input type="text" v-model="postToEdit.name" placeholder="title" />
       </div>
       <div class="inputbox">
         <input
           class=""
           type="number"
-          v-model="marketToEdit.price"
+          v-model="postToEdit.price"
           placeholder="price"
         />
       </div>
@@ -21,43 +21,43 @@
 </template>
 
 <script>
-  import {marketService} from '../services/market.service.js'
+  import {postService} from '../services/post.service.js'
 
   export default {
-    name: 'MarketEdit',
+    name: 'PostEdit',
     components: {},
     data() {
       return {
-        marketToEdit: null,
+        postToEdit: null,
       }
     },
     async created() {
-      const marketId = this.marketId
-      if (marketId) {
-        const market = await this.$store.dispatch({
-          type: 'getMarketById',
-          marketId,
+      const postId = this.postId
+      if (postId) {
+        const post = await this.$store.dispatch({
+          type: 'getPostById',
+          postId,
         })
-        this.marketToEdit = market
+        this.postToEdit = post
       } else {
-        this.marketToEdit = marketService.getEmptyMarket()
+        this.postToEdit = postService.getEmptyPost()
       }
     },
     methods: {
       async save() {
         await this.$store.dispatch({
-          type: 'saveMarket',
-          market: this.marketToEdit,
+          type: 'savePost',
+          post: this.postToEdit,
         })
         this.$router.push('/')
       },
     },
     computed: {
       formTitle() {
-        return this.marketId ? 'Edit market' : 'Add market'
+        return this.postId ? 'Edit post' : 'Add post'
       },
-      marketId() {
-        return this.$route.params.marketId
+      postId() {
+        return this.$route.params.postId
       },
     },
     unmounted() {},

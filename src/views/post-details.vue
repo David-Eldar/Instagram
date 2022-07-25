@@ -1,10 +1,10 @@
 <template>
-  <div v-if="isShow && market" @click="closeModal" class="modal">
+  <div v-if="isShow && post" @click="closeModal" class="modal">
     <form @submit.prevent class="form-details">
-      <h1>{{ market?.label }} market details</h1>
-      {{ market }}
+      <h1>{{ post?.label }} post details</h1>
+      {{ post }}
       <div class="img-container">
-        <img class="details-img" v-if="market" :src="showMarket" alt="" />
+        <img class="details-img" v-if="post" :src="showPost" alt="" />
       </div>
     </form>
   </div>
@@ -12,23 +12,23 @@
 
 <script>
   export default {
-    name: 'MarketDetails',
+    name: 'PostDetails',
     components: {},
     data() {
       return {
-        market: null,
+        post: null,
         isShow: true,
       }
     },
     created() {},
     methods: {
-      async loadMarket() {
-        if (!this.marketId) return // prevent the run of the watcher when change route
-        const market = await this.$store.dispatch({
-          type: 'getMarketById',
-          marketId: this.marketId,
+      async loadPost() {
+        if (!this.postId) return // prevent the run of the watcher when change route
+        const post = await this.$store.dispatch({
+          type: 'getPostById',
+          postId: this.postId,
         })
-        this.market = market
+        this.post = post
         this.isShow = true
       },
       closeModal() {
@@ -36,28 +36,28 @@
       },
     },
     computed: {
-      //opt 2 use computed for the marketId
-      marketId() {
-        return this.$route.params.marketId
+      //opt 2 use computed for the postId
+      postId() {
+        return this.$route.params.postId
       },
-      showMarket() {
-        console.log(this.market)
-        return this.market.imgUrl
+      showPost() {
+        console.log(this.post)
+        return this.post.imgUrl
       },
     },
     //opt1 use the param specf as the func
     //   watch: {
-    //     '$route.params.marketId'(id) {
+    //     '$route.params.postId'(id) {
     //       console.log('Changed to', id);
-    //       this.loadMarket();
+    //       this.loadPost();
     //     },
     //   },
     //opt 2
     watch: {
-      // when the computed marketId run the watch handler also run
-      marketId: {
+      // when the computed postId run the watch handler also run
+      postId: {
         handler() {
-          this.loadMarket()
+          this.loadPost()
         },
         immediate: true, //to also run the watch on the start / run eagerly
       },
