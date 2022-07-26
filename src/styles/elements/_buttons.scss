@@ -1,0 +1,15 @@
+button{
+    all:unset;
+    &:hover{
+        cursor: pointer;
+    }
+}
+svg {
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.meatballs-menu-btn{
+  text-decoration: dashed;
+}

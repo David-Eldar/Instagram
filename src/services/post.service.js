@@ -11,7 +11,8 @@ const story = {
   "createdAt": 123543452,
   "by": {
     "_id": "u101",
-    "fullname": "Ulash Ulashi",
+    "fullname": "moyshale_ufnik",
+    // "imgUrl": "http://some-img"
     "imgUrl": "http://some-img"
   },
   "loc": {

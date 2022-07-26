@@ -4,7 +4,7 @@
     <header class="header-content-container header-layout flex">
 
       <div class="logo-container flex">
-        <h2 class="header-logo">Mistergram</h2>
+        <h2 class="header-logo">Mistargram</h2>
       </div>
       <post-filter />
       

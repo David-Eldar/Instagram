@@ -7,6 +7,7 @@
   border: 1x solid black;
   margin: auto;
   padding-top: 5px;
+  // height: rem(60px);
 
 
 
@@ -16,7 +17,9 @@
     align-items: center;
     justify-content: space-between;
     width: rem(975px);
-    height: rem(60px);
+    height: em(73px);
+    
+    // padding: em(0px) em(10px);
 
     .logo-container {
       position: relative;
@@ -28,7 +31,7 @@
         font-family: insta-font;
         letter-spacing: normal;
         font-size: xx-large;
-        font-weight:100;
+        font-weight:900;
        }
     }
   }
@@ -47,6 +50,7 @@
 .under-line{
   margin: 0 auto;
   background-color: #fff;
+  border: 1px solid $thinGray;
   width: 100%;
   display: flex;
   position: static;
