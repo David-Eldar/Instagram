@@ -1,0 +1,36 @@
+.post-content-container{
+    position: relative;
+    padding: 7px;
+    font-family: sans-serif;
+    
+    .comment-inputbox{
+        position: relative;
+        align-items: center;
+        gap:em(10px);
+        .emoji-btn{
+         align-items: center;
+         svg{
+         height: rem(24px);
+         width: fit-content;
+         }
+        } 
+        input{
+         all:unset;
+         border-radius: rem(5px);
+         background-color: rgba(227, 227, 224, 0.68);
+         width: 85%; 
+         height: rem(18px);
+         text-align: left;
+         font-size: smaller;
+         
+        } 
+        .post-btn { 
+          font-size: smaller; 
+          font-weight: 900;
+          color: rgb(168, 211, 226);
+        } 
+
+    }
+   
+
+}

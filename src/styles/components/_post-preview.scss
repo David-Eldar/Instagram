@@ -2,79 +2,110 @@
   margin-top: 0.8em;
   width:rem(470px);
   border: 1px solid $thinGray;
+  font-family: sans-serif;
   
   justify-content: space-between;
   border-radius: 7px;
   // text-align: center;
 
   .user-info{
-    padding: 7px;
-    justify-content: flex-start; 
+    padding: rem(7px);
+    
+    justify-content: space-between; 
     align-items: center;
 
     .user-img-container{
       align-items: center;
   
-      .user-img-placeholder {
+      .user-img-ring {
         width: rem(42px);
         height: rem(42px);
-        border: 2px solid palevioletred;
+        // border: 2px solid #d87093;
+        // border: 2px solid; 
+        background: linear-gradient(45deg, #dfe230 5%,#ceb123 20%,#e18a47 35%,#d87093 45%,#d87093 100%); 
+
         border-radius: 50%;
-        // clip-path: circle();
+        clip-path: circle();
         background-color: $bg-grey;
-        margin-left: em(1px);
-        // margin-right: 1em;
         align-items: center;
         justify-content: center;
-        
-        img {
-          padding: em(3px) em(1px);
-          border:1px solid $thinGray;
+        .user-img-placeholder {
           border-radius: 50%;
-          // clip-path: circle();
-          
-          height: rem(42px);
-          width: rem(42px);
-         }
+          width: em(38px);
+          height: em(38px);
+          background-color: #fff;
+          align-items: center;
+          justify-content: center;
+          img {
+            padding: em(2px);
+            // border: solid $thinGray;
+            border-radius: 50%;
+            clip-path: circle();
+            
+            height: em(38px);
+            width: em(38px);
+           }
+        }
+      
+
       }
   
     }
   }
 
   .user-details{
-     width: rem(360px);
-
-    
-    // justify-content:space-evenly;
+    width: rem(359px);
     align-items: flex-start;
-    margin-left: 10px;
-    h5,h6{
-      all: unset
-    }
+    justify-content: center;
+    
+    margin-left: rem(8px);
+
     h5{
-      font-size: 15px;
-      font-weight: bold;
+      font-size: rem(15px);
+      font-weight: bolder;
+      text-align: end;
     }
+    h6{
+      font-size: rem(10px);
+      font-weight: normal;
+    }
+  }
+  .meatballs-menu-container {
+    // justify-content: flex-end;
+    // align-items: flex-end;
+    text-align: right;
+  }
+
+  .post-img-placholder {
+  
+
+    img{
+      width:rem(470px);
+    }
+  
   }
   
 
-  // .meatballs-menu-container{
-  //   padding-right: 10px;
-     
-  // }
-
-  
-   
-
-
-
-
-}
-.post-img-placholder {
-  
-
-  img{
-    width:rem(470px);
+  .preview-icons-nav-bar {
+    position: relative;
+    padding: 7px;
+    
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      height: rem(40px);
+      position: relative;
+      justify-content: space-between;
+      gap: 10px;
+      li {
+      }
+      
+      
+    }
+    svg{
+      height: rem(24px);
+      width: fit-content;
+    }
   }
 
 }

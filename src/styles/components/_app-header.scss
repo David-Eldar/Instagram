@@ -1,12 +1,15 @@
 .app-header {
   position: sticky;
   top: 0;
+  z-index: 100;
   background-color: #fff;
   align-items: center;
-  justify-content: flex-start;
-  border: 1x solid black;
-  margin: auto;
-  padding-top: 5px;
+  justify-content: center;
+
+  // border: 1x solid black;
+  // margin: auto;
+  padding: 5px;
+  padding-bottom: 0%;
   // height: rem(60px);
 
 
@@ -17,7 +20,8 @@
     align-items: center;
     justify-content: space-between;
     width: rem(975px);
-    height: em(73px);
+    height: em(46px);
+    // gap: rem(100px);
     
     // padding: em(0px) em(10px);
 
@@ -30,27 +34,33 @@
       .header-logo {
         font-family: insta-font;
         letter-spacing: normal;
-        font-size: xx-large;
-        font-weight:900;
+        font-size: 24px;
+        font-weight:100;
        }
     }
   }
+
   .header-icon-nav-bar{
     position: relative;
     width: rem(334px);
     justify-content: flex-end;
-    gap: rem(20px);
+    gap: rem(25px);
     align-items: center;
     padding-right: 20px;
+    svg {
+      width: fit-content;
+      height: rem(24px);
+    }
   }
 
 
 }
 
 .under-line{
-  margin: 0 auto;
+  margin: 0;
   background-color: #fff;
-  border: 1px solid $thinGray;
+  border-top: 0.1px solid $thinGray;
+  padding: 0%;
   width: 100%;
   display: flex;
   position: static;

@@ -59,6 +59,11 @@
   margin-inline-end: 20px;
 }
 
+.preview-layout{
+  margin-inline-start: $previewLayout;
+  margin-inline-end: $previewLayout;
+}
+
 
 .card-grid {
   display: grid;

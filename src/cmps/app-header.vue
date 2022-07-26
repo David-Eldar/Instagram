@@ -115,7 +115,7 @@
 
       </nav>
     </header>
-      <hr class="under-line">    
+      <hr class="under-line full">    
   </section>
 </template>
 <script>
