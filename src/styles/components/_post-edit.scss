@@ -1,9 +1,55 @@
 .post-content-container{
+    padding-left: em(2px);
+    padding-right: em(2px);
     position: relative;
-    padding: 7px;
+    
     font-family: sans-serif;
     
+    hr {
+      border-top: $thinGray;
+      width: 100%;
+    }
+    h5{
+      font-size: rem(15px);
+      font-weight: bolder;
+      
+    }
+    // h6{
+    //   font-size: rem(12px);
+    //   font-weight: normal;
+    // }
+
+    .content-inbox{
+      margin-top: rem(5px);
+      margin-bottom: rem(5px);
+      gap: em(2px);
+      .post {
+        align-items: center;
+        .username{
+          font-weight: bolder;
+        }
+    
+      }
+      .view-cmts {
+        color: rgb(141, 140, 140);
+      }
+      .created-at{
+        margin-top: em(15px);
+        color: rgb(147, 144, 144);
+        font-weight: 500;
+        font-size: rem(11px);
+      }
+     
+    }
+
+ 
+
+
+    
     .comment-inputbox{
+         height: rem(38px);
+         
+        // padding: em(7px);
         position: relative;
         align-items: center;
         gap:em(10px);
@@ -17,7 +63,7 @@
         input{
          all:unset;
          border-radius: rem(5px);
-         background-color: rgba(227, 227, 224, 0.68);
+         background-color: rgba(227, 227, 224, 0);
          width: 85%; 
          height: rem(18px);
          text-align: left;
@@ -27,7 +73,8 @@
         .post-btn { 
           font-size: smaller; 
           font-weight: 900;
-          color: rgb(168, 211, 226);
+          color: rgb(45, 170, 215);
+          filter: opacity(40%);
         } 
 
     }

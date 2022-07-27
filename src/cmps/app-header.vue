@@ -4,7 +4,7 @@
     <header class="header-content-container header-layout flex">
 
       <div class="logo-container flex">
-        <h2 class="header-logo">Mistargram</h2>
+       <router-link to="/" ><button class="header-logo">Mistargram</button></router-link> 
       </div>
       <post-filter />
       

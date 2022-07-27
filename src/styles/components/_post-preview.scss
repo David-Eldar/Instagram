@@ -6,10 +6,11 @@
   
   justify-content: space-between;
   border-radius: 7px;
-  // text-align: center;
+  
 
   .user-info{
-    padding: rem(7px);
+    padding-top: rem(8px);
+    padding-bottom: rem(8px);
     
     justify-content: space-between; 
     align-items: center;
@@ -77,10 +78,15 @@
   }
 
   .post-img-placholder {
-  
+    align-items: center;
+    justify-content: center;
+    margin: em(2px);
+    // padding-inline-start: 10px;
+    // padding-inline-end: 10px;
+    
 
     img{
-      width:rem(470px);
+      width:em(468px);
     }
   
   }
@@ -88,14 +94,18 @@
 
   .preview-icons-nav-bar {
     position: relative;
-    padding: 7px;
+    padding-top: rem(8px);
+    padding-left: rem(2px);
+    padding-right: rem(2px);
+    
     
     justify-content: space-between;
     align-items: center;
     ul {
-      height: rem(40px);
+      height: rem(35px);
       position: relative;
       justify-content: space-between;
+      align-items: center;
       gap: 10px;
       li {
       }

@@ -5,7 +5,7 @@ $bg-grey: #f8f8f8;
 $header-drop-arrow: #969696;
 //header circle border - #c7c7c7
 //header circle dots - #bababa
-$thinGray: rgba(196, 196, 196, 0.995);
+$thinGray: rgba(178, 179, 179, 0.995);
 
 //sorting bg color - #f8f8f8
 //sorting border-top - #e6e6e6
@@ -30,7 +30,8 @@ $clr5: #2d2d2d;
 // LAYOUT
 $layoutPadding: 20px;
 $headerLayoutPadding: rem(126.5px);
-$previewLayout: 5px;
+$previewLayout: 8px;
+$paddingExtra:1px;
 
 // LAYOUT BREAKPOINTS
 $break-narrow: 1200px;

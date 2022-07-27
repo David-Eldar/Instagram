@@ -32,10 +32,11 @@
 
     </div>
 
-     <div class="post-img-placholder">
+     <div class="post-img-placholder flex relative">
       <img src="../assets/imgs/post-test-img.jpeg" alt="">
     </div>
 
+     
     <nav class="preview-icons-nav-bar flex preview-layout">
       <ul class="clean-list flex">
         <li><button><svg 
@@ -117,7 +118,7 @@
       </button>
     </nav>
 
-
+      
     
       <post-edit/>
     

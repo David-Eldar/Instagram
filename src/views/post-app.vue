@@ -1,9 +1,10 @@
 <template>
-  <main class="main-layout-container"></main>
+  <main class="main-layout-container">
   <section>
     <!-- <post-filter /> -->
   </section>
   <post-list @removed="removePost" v-if="posts" :posts="posts" />
+  </main>
 </template>
 
 <script>

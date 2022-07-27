@@ -1,4 +1,12 @@
 <template>
+  <div>
+    Mic Check 1 2...
+  </div>
+</template>
+
+
+
+<!-- <template>
   <div v-if="isShow && post" @click="closeModal" class="modal">
     <form @submit.prevent class="form-details">
       <h1>{{ post?.label }} post details</h1>
@@ -74,4 +82,4 @@
     align-items: center;
     /* margin: 0 auto; */
   }
-</style>
+</style> -->

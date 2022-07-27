@@ -1,13 +1,24 @@
 <template>
-  <div>
-    <form class="post-content-container column preview-layout">
+  
+  <form class="post-content-container column relative">
+
+    <div class="content-inbox column relative preview-layout">
+        
       <h5 class="likers flex">likes</h5>
       <!-- <h5 class="post flex">{{ post.by.fullname }}<p>{{post.txt}}</p></h5> -->
-      <h5 class="post flex">username<p>#post</p></h5>
-      <button class="view-cmts flex">view all comments</button>
+      <ul class="post flex clean-list">
+       <li class="username">username</li>
+       <li class="post-content">#post about some shity cliche</li>
+      </ul>
+       <router-link to="/post" ><button class="view-cmts flex">view all comments</button></router-link>
+       <h6 class="created-at flex">X HOURES AGO</h6>
+    </div>
 
-      <div class="comment-inputbox flex">
-       <button class="emoji-btn flex"><svg 
+      <hr>
+
+    <div class="comment-inputbox flex relative preview-layout">
+       <button class="emoji-btn flex"><router-link to="post/"></router-link>
+        <svg 
          aria-label="Emoji" 
          class="_ab6-" 
          color="#262626" 
@@ -20,10 +31,10 @@
          </svg></button> 
         <input type="text" placeholder="Add a comment..." />
         <button class="post-btn">Post</button>
-      </div>
+    </div>
       
-    </form>
-  </div>
+  </form>
+  
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <section class="post-list container-layout column">
+  <section class="post-list main-layout-container column">
     <post-preview
       v-for="post in posts"
       :key="post._id"

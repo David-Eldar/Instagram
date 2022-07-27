@@ -4,6 +4,9 @@ button{
         cursor: pointer;
     }
 }
+a{
+    all: unset;
+}
 svg {
 
     &:hover{

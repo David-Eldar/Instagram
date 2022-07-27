@@ -7,7 +7,7 @@
   justify-content: center;
 
   // border: 1x solid black;
-  // margin: auto;
+  
   padding: 5px;
   padding-bottom: 0%;
   // height: rem(60px);
@@ -59,7 +59,7 @@
 .under-line{
   margin: 0;
   background-color: #fff;
-  border-top: 0.1px solid $thinGray;
+  border-top: $thinGray;
   padding: 0%;
   width: 100%;
   display: flex;
