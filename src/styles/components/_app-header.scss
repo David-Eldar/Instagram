@@ -1,10 +1,13 @@
 .app-header {
   position: sticky;
+  height: 60px;
   top: 0;
   z-index: 100;
   background-color: #fff;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid $thinGray;
+  padding: 0 20px;
 
   // border: 1x solid black;
   
@@ -19,50 +22,41 @@
     position: relative;
     align-items: center;
     justify-content: space-between;
-    width: rem(975px);
-    height: em(46px);
-    // gap: rem(100px);
+    width: 975px;
+    height: 60px;
+    flex-basis: 975px;
     
     // padding: em(0px) em(10px);
 
     .logo-container {
       position: relative;
-      width:rem(334px);
+      width:334px;
       text-align: left;
-      padding-left: 20px;
+      padding-left: rem(20px);
 
       .header-logo {
         font-family: insta-font;
         letter-spacing: normal;
-        font-size: 24px;
+        font-size: 28px;
         font-weight:100;
+        
        }
     }
   }
 
   .header-icon-nav-bar{
     position: relative;
-    width: rem(334px);
+    width: 334px;
     justify-content: flex-end;
-    gap: rem(25px);
+    gap: 25px;
     align-items: center;
     padding-right: 20px;
     svg {
       width: fit-content;
-      height: rem(24px);
+      height: 24px;
     }
   }
 
 
 }
 
-.under-line{
-  margin: 0;
-  background-color: #fff;
-  border-top: $thinGray;
-  padding: 0%;
-  width: 100%;
-  display: flex;
-  position: static;
-  top: 0;
-}

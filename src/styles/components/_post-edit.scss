@@ -24,10 +24,12 @@
       margin-bottom: rem(5px);
       gap: em(2px);
       .post {
+        gap: rem(5px);
         align-items: center;
         .username{
           font-weight: bolder;
         }
+    
     
       }
       .view-cmts {

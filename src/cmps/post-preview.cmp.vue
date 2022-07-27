@@ -120,7 +120,7 @@
 
       
     
-      <post-edit/>
+      <post-edit :post="post"/>
     
   </section>
 </template>

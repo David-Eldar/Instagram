@@ -5,12 +5,16 @@
     <div class="content-inbox column relative preview-layout">
         
       <h5 class="likers flex">likes</h5>
-      <!-- <h5 class="post flex">{{ post.by.fullname }}<p>{{post.txt}}</p></h5> -->
       <ul class="post flex clean-list">
-       <li class="username">username</li>
-       <li class="post-content">#post about some shity cliche</li>
+        <li class="username">{{ post.by.fullname }}</li>
+       <!-- <li class="username">username</li> -->
+       <li class="post-content">{{post.txt}}</li>
       </ul>
-       <router-link to="/post" ><button class="view-cmts flex">view all comments</button></router-link>
+       <router-link to="/post/:postId?" ><button class="view-cmts flex">view all comments</button></router-link>
+       <!-- <ul class="comments flex clean-list">
+        <li class="username">{{post.comments.}}</li>
+        <li class="comment">{{post.comments}}</li>
+       </ul> -->
        <h6 class="created-at flex">X HOURES AGO</h6>
     </div>
 
@@ -97,9 +101,7 @@ unmounted() {},
       },
     },
     computed: {
-      formTitle() {
-        return this.postId ? 'Edit post' : 'Add post'
-      },
+
       postId() {
         return this.$route.params.postId
       },

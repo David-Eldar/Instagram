@@ -1,15 +1,18 @@
 <template>
   <section
     class="filter-container flex">
-    <div class="search flex">
+    <form class="search flex">
       <input
-        type="text"
+        type="search"
         class="input-search"
         v-model="filterBy.txt"
         placeholder="Search "
         @input="setFilter"
       />
-    </div>
+    </form>
+    <!-- <form>
+  <input type="search" placeholder="Search...">
+</form> -->
   </section>
 </template>
 

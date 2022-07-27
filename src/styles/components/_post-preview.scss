@@ -1,6 +1,6 @@
 .post-preview {
   margin-top: 0.8em;
-  width:rem(470px);
+  width: 470px;
   border: 1px solid $thinGray;
   font-family: sans-serif;
   
@@ -11,7 +11,7 @@
   .user-info{
     padding-top: rem(8px);
     padding-bottom: rem(8px);
-    
+    height: 55px;
     justify-content: space-between; 
     align-items: center;
 
@@ -19,32 +19,40 @@
       align-items: center;
   
       .user-img-ring {
-        width: rem(42px);
-        height: rem(42px);
+        width: 42px;
+        height: 42px;
         // border: 2px solid #d87093;
         // border: 2px solid; 
-        background: linear-gradient(45deg, #dfe230 5%,#ceb123 20%,#e18a47 35%,#d87093 45%,#d87093 100%); 
-
+        // background: linear-gradient(45deg, #dfe230 5%,#ceb123 20%,#e18a47 35%,#d87093 45%,#d87093 100%); 
+        background: linear-gradient(45deg, $yellow 10%,$yellow_to 20%,$orange 30%,$red 40%,$purple 80%, $blue 100%); 
+        
+        
         border-radius: 50%;
-        clip-path: circle();
+        
         background-color: $bg-grey;
         align-items: center;
         justify-content: center;
+
         .user-img-placeholder {
           border-radius: 50%;
-          width: em(38px);
-          height: em(38px);
+          width: 38px;
+          height: 38px;
           background-color: #fff;
           align-items: center;
           justify-content: center;
+          
+          
           img {
-            padding: em(2px);
+            padding: rem(2px);
             // border: solid $thinGray;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            object-fit:cover;
             border-radius: 50%;
-            clip-path: circle();
+            height: 38px;
+            width: 38px;
             
-            height: em(38px);
-            width: em(38px);
            }
         }
       
@@ -55,19 +63,19 @@
   }
 
   .user-details{
-    width: rem(359px);
+    width: 359px;
     align-items: flex-start;
     justify-content: center;
     
     margin-left: rem(8px);
 
     h5{
-      font-size: rem(15px);
+      font-size: 15px;
       font-weight: bolder;
       text-align: end;
     }
     h6{
-      font-size: rem(10px);
+      font-size: 10px;
       font-weight: normal;
     }
   }
@@ -78,6 +86,7 @@
   }
 
   .post-img-placholder {
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: em(2px);
@@ -86,7 +95,11 @@
     
 
     img{
-      width:em(468px);
+      width:470px;
+      padding: rem(0.5px);
+      margin-left: rem(0.5px);
+      // object-fit:contain;
+      
     }
   
   }
@@ -102,7 +115,7 @@
     justify-content: space-between;
     align-items: center;
     ul {
-      height: rem(35px);
+      height: 35px;
       position: relative;
       justify-content: space-between;
       align-items: center;
@@ -113,7 +126,7 @@
       
     }
     svg{
-      height: rem(24px);
+      height: 24px;
       width: fit-content;
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <section class="column full app-header">
+  <section class="flex full app-header">
 
     <header class="header-content-container header-layout flex">
 
@@ -115,7 +115,7 @@
 
       </nav>
     </header>
-      <hr class="under-line full">    
+      <!-- <hr class="under-line full">     -->
   </section>
 </template>
 <script>
