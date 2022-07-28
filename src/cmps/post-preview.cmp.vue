@@ -2,16 +2,9 @@
   <section class="post-preview column ">
 
     <div class="user-info flex preview-layout">
-      <div class="user-img-container flex">
-      <div class="user-img-ring flex">
-        <div class="user-img-placeholder flex">
-        <img src="../assets/imgs/User-test-img.jpeg" alt="">
-        </div>
-        </div>
-      <div class="user-details column flex relative">
-        <h5 class="username">{{ post.by.fullname }}</h5>
-        <h6 class="posted-from">{{post.loc.name}}</h6>
-      </div>
+      <div class="user-info-container flex">
+        <user-details :post="post"/>
+
     </div>
      <div class="meatballs-menu-container flex relative">
        <button class="meatballs-menu-btn">
@@ -137,6 +130,7 @@
 <script>
   
 
+  import userDetails from './user-details.cmp.vue'
   import postEdit from './post-edit.cmp.vue'
   import postContent from './post-content.cmp.vue'
   import postComments from './post-comments.cmp.vue'
@@ -146,6 +140,7 @@
     props: ['post'],
     // emits: ['remove'],
     components: {
+      userDetails,
       postEdit,
       postContent,
       postComments

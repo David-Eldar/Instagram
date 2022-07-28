@@ -13,17 +13,13 @@
 
       <div class="user-img-container flex">
 
-       <div class="user-img-ring flex">
-        <div class="user-img-placeholder flex">
-          <img src="../assets/imgs/User-test-img.jpeg" alt="">
-        </div>
-       </div>
+         <user-details :post="post"/>
 
       </div>
       
 
        <div class="user-details flex relative">
-        <h5 class="user-name">UserName</h5>
+        <!-- <h5 class="user-name">UserName</h5> -->
        </div>
 
      <div class="meatballs-menu-container flex relative">
@@ -44,8 +40,13 @@
      </div>
 
 
-             <div class="preview-content-container column relative preview-layout">
-         <h5 class="likers flex ">likes</h5>
+
+
+     
+      </div>
+
+                   <div class="preview-content-container column relative preview-layout">
+         
 
          <post-content :post="post"/>
       
@@ -55,9 +56,7 @@
       
         </div>
 
-          <post-edit :post="post"/>
-
-      </div>
+          
                <nav class="preview-icons-nav-bar flex space-between main-layout-container">
       <ul class="clean-list flex">
         <li><button><svg 
@@ -138,6 +137,8 @@
         </svg>
       </button>
          </nav>
+
+         <post-edit :post="post"/>
       </div>
     
       
@@ -151,7 +152,9 @@
 </template>
 
 <script>
+
   import postEdit from '../cmps/post-edit.cmp.vue'
+  import userDetails from '../cmps/user-details.cmp.vue'
   import postContent from '../cmps/post-content.cmp.vue'
   import postComments from '../cmps/post-comments.cmp.vue'
   
@@ -159,8 +162,10 @@
 
   export default {
     name: 'postDetails',
+    props: ['post'],
     // emits: ['remove'],
     components: {
+      userDetails,
       postEdit,
       postContent,
       postComments

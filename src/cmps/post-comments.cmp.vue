@@ -5,7 +5,7 @@
     <router-link :to="'/post/'+ post._id"  ><button class="view-cmts flex">view all comments</button></router-link>
     
     <ul class="comments flex clean-list">
-      <li class="username" v-for="comment in post.comments" :key="comment">
+      <li class="username flex" v-for="comment in post.comments" :key="comment">
           {{comment.by.fullname}}
       <p class="commet">{{comment.txt}}</p>
     </li>
