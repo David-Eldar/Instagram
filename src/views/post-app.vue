@@ -4,6 +4,9 @@
     <!-- <post-filter /> -->
   </section>
   <post-list @removed="removePost" v-if="posts" :posts="posts" />
+
+   <post-details class="post-details"/>
+
   </main>
 </template>
 
@@ -14,7 +17,7 @@
   
 
   export default {
-    name: 'PostApp',
+    name: 'postApp',
     components: {
       postList,
       postEdit,

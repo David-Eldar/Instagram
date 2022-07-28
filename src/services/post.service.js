@@ -28,6 +28,7 @@ const story = {
         "fullname": "Bob",
         "imgUrl": "http://some-img"
       },
+
       "txt": "good one!",
       "likedBy": [ // Optional
         {
@@ -36,16 +37,16 @@ const story = {
           "imgUrl": "http://some-img"
         }
       ]
-    },
-    {
-      "id": "c1002",
-      "by": {
-        "_id": "u106",
-        "fullname": "Dob",
-        "imgUrl": "http://some-img"
-      },
-      "txt": "not good!",
     }
+    // {
+    //   "id": "c1002",
+    //   "by": {
+    //     "_id": "u106",
+    //     "fullname": "Dob",
+    //     "imgUrl": "http://some-img"
+    //   },
+    //   "txt": "not good!",
+    // }
   ],
   "likedBy": [
     {
@@ -59,6 +60,7 @@ const story = {
       "imgUrl": "http://some-img"
     }
   ],
+
   "tags":["fun", "kids"]
 }
 
@@ -91,10 +93,11 @@ export const postService = {
   getById,
   remove,
   save,
-  getEmptypost,
+  getEmptyPost,
+  getEmptyComment
 };
 
-_createposts();
+_createPosts();
 
 async function query() {
   try {
@@ -131,7 +134,7 @@ async function save(post) {
   }
 }
 
-function getEmptypost() {
+function getEmptyPost() {
   return story
   // return {
   //   _id: '',
@@ -142,21 +145,40 @@ function getEmptypost() {
   // };
 }
 
+function getEmptyComment(){
+  return  {
+    "id": "c1001",
+    "by": {
+      "_id": "u105",
+      "fullname": "Bob",
+      "imgUrl": "http://some-img"
+    },
+    "txt": "good one!",
+    "likedBy": [ // Optional
+      {
+        "_id": "u105",
+        "fullname": "Bob",
+        "imgUrl": "http://some-img"
+      }
+    ]
+  }
+}
+
 // Create Test Data:
-function _createposts() {
+function _createPosts() {
   let posts = JSON.parse(localStorage.getItem(KEY));
   if (!posts || !posts.length) {
     posts = []
-    for (let i = 0; i < 30; i++) {
-      posts.push(_createpost())
+    for (let i = 0; i < 10; i++) {
+      posts.push(_createPost())
     }
     localStorage.setItem(KEY, JSON.stringify(posts));
   }
   return posts;
 }
 
-function _createpost() {
-  const post = getEmptypost();
+function _createPost() {
+  const post = getEmptyPost();
   post._id = utilService.makeId();
   return post;
 }

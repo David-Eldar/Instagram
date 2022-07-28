@@ -1,5 +1,5 @@
 <template>
-  <section class="post-preview column">
+  <section class="post-preview column ">
 
     <div class="user-info flex preview-layout">
       <div class="user-img-container flex">
@@ -9,7 +9,7 @@
         </div>
         </div>
       <div class="user-details column flex relative">
-        <h5 class="user-name">{{ post.by.fullname }}</h5>
+        <h5 class="username">{{ post.by.fullname }}</h5>
         <h6 class="posted-from">{{post.loc.name}}</h6>
       </div>
     </div>
@@ -118,21 +118,37 @@
       </button>
     </nav>
 
+        <div class="preview-content-container column relative preview-layout">
+         <h5 class="likers flex ">likes</h5>
+
+         <post-content :post="post"/>
       
+         <post-comments :post="post"/>
+
+         <h6 class="created-at flex">X HOURES AGO</h6>
+      
+        </div>
+
+          <post-edit :post="post"/>
     
-      <post-edit :post="post"/>
     
   </section>
 </template>
 <script>
   
+
   import postEdit from './post-edit.cmp.vue'
+  import postContent from './post-content.cmp.vue'
+  import postComments from './post-comments.cmp.vue'
+
   export default {
     name: 'postPreview',
     props: ['post'],
     // emits: ['remove'],
     components: {
       postEdit,
+      postContent,
+      postComments
       // testCmo
     },
     data() {

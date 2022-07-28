@@ -2,133 +2,85 @@
   margin-top: 0.8em;
   width: 470px;
   border: 1px solid $thinGray;
-  font-family: sans-serif;
-  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  // letter-spacing:px;
   justify-content: space-between;
   border-radius: 7px;
+
+
+
+
+}
+
+
+.user-info{
+  padding-top: rem(8px);
+  padding-bottom: rem(8px);
+  height: 55px;
+  justify-content: space-between; 
+  align-items: center;
+
+
+}
+
+.user-details{
+  width: 359px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: rem(8px);
+  margin-bottom: rem(5px);
+  gap: rem(0.5px);
+}
+.username {
+
+  font-size: rem(16px);
+}
+.meatballs-menu-container {
+  // justify-content: flex-end;
+  // align-items: flex-end;
+  text-align: right;
+}
+
+.post-img-placholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: em(2px);
+  // padding-inline-start: 10px;
+  // padding-inline-end: 10px;
   
 
-  .user-info{
-    padding-top: rem(8px);
-    padding-bottom: rem(8px);
-    height: 55px;
-    justify-content: space-between; 
-    align-items: center;
-
-    .user-img-container{
-      align-items: center;
-  
-      .user-img-ring {
-        width: 42px;
-        height: 42px;
-        // border: 2px solid #d87093;
-        // border: 2px solid; 
-        // background: linear-gradient(45deg, #dfe230 5%,#ceb123 20%,#e18a47 35%,#d87093 45%,#d87093 100%); 
-        background: linear-gradient(45deg, $yellow 10%,$yellow_to 20%,$orange 30%,$red 40%,$purple 80%, $blue 100%); 
-        
-        
-        border-radius: 50%;
-        
-        background-color: $bg-grey;
-        align-items: center;
-        justify-content: center;
-
-        .user-img-placeholder {
-          border-radius: 50%;
-          width: 38px;
-          height: 38px;
-          background-color: #fff;
-          align-items: center;
-          justify-content: center;
-          
-          
-          img {
-            padding: rem(2px);
-            // border: solid $thinGray;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;
-            object-fit:cover;
-            border-radius: 50%;
-            height: 38px;
-            width: 38px;
-            
-           }
-        }
-      
-
-      }
-  
-    }
-  }
-
-  .user-details{
-    width: 359px;
-    align-items: flex-start;
-    justify-content: center;
+  img{
+    width:470px;
+    padding: rem(0.5px);
+    margin-left: rem(0.5px);
+    // object-fit:contain;
     
-    margin-left: rem(8px);
-
-    h5{
-      font-size: 15px;
-      font-weight: bolder;
-      text-align: end;
-    }
-    h6{
-      font-size: 10px;
-      font-weight: normal;
-    }
-  }
-  .meatballs-menu-container {
-    // justify-content: flex-end;
-    // align-items: flex-end;
-    text-align: right;
   }
 
-  .post-img-placholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: em(2px);
-    // padding-inline-start: 10px;
-    // padding-inline-end: 10px;
-    
+}
 
-    img{
-      width:470px;
-      padding: rem(0.5px);
-      margin-left: rem(0.5px);
-      // object-fit:contain;
-      
-    }
+
+.preview-icons-nav-bar {
+  position: relative;
+  padding-top: rem(8px);
+  padding-left: rem(2px);
+  padding-right: rem(2px);
   
-  }
-  
-
-  .preview-icons-nav-bar {
+  justify-content: space-between;
+  align-items: center;
+  ul {
+    height: 35px;
     position: relative;
-    padding-top: rem(8px);
-    padding-left: rem(2px);
-    padding-right: rem(2px);
-    
-    
     justify-content: space-between;
     align-items: center;
-    ul {
-      height: 35px;
-      position: relative;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      li {
-      }
-      
-      
-    }
-    svg{
-      height: 24px;
-      width: fit-content;
-    }
-  }
+    gap: 10px;
 
+    
+    
+  }
+  svg{
+    height: 24px;
+    width: fit-content;
+  }
 }

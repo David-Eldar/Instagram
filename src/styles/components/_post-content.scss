@@ -1,0 +1,34 @@
+.preview-content-container{
+   
+  gap: rem(8px);
+}
+
+
+
+.likers {
+  font-size: rem(18px);
+}
+.content-inbox{
+  margin-top: rem(10px);
+  margin-bottom: rem(10px);
+  height: fit-content;
+  gap: 5px;
+
+  .post {
+    gap: rem(5px);
+    align-items: center;
+    .username{
+      font-weight: bolder;
+    }
+  }  
+}
+
+.view-cmts {
+  color: rgb(141, 140, 140);
+}
+.created-at{
+   margin-top: em(12px);
+   color: rgb(147, 144, 144);
+   font-weight: 500;
+   font-size: rem(11px);
+ }

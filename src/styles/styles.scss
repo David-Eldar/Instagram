@@ -9,15 +9,22 @@
 @import 'basics/base';
 @import 'basics/layout';
 
+// VIEWS 
+@import 'views/post-details';
+
+
 // COMPONENTS
 @import 'components/app-header';
 @import 'components/post-preview';
 @import 'components/post-list';
 @import 'components/post-filter';
 @import 'components/post-edit';
+@import 'components/post-comments';
+@import 'components/post-content';
 
 // ELEMENS 
 @import 'elements/buttons';
+@import 'elements/img';
 
 
 //Pages

@@ -8,7 +8,7 @@ export default {
   },
   getters: {
     posts(state) {
-      return state.posts;
+      return state.posts 
     },
     isLoading(state) {
       return state.isLoading;
@@ -29,6 +29,7 @@ export default {
       const idx = state.posts.findIndex(
         (currPost) => currPost._id === post._id
       );
+      console.log('post:',post)
       if (idx !== -1) state.posts.splice(idx, 1, post);
       else state.posts.unshift(post);
     },

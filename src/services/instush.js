@@ -30,15 +30,15 @@ const story = {
         }
       ]
     },
-    {
-      "id": "c1002",
-      "by": {
-        "_id": "u106",
-        "fullname": "Dob",
-        "imgUrl": "http://some-img"
-      },
-      "txt": "not good!",
-    }
+    // {
+    //   "id": "c1002",
+    //   "by": {
+    //     "_id": "u106",
+    //     "fullname": "Dob",
+    //     "imgUrl": "http://some-img"
+    //   },
+    //   "txt": "not good!",
+    // }
   ],
   "likedBy": [
     {
