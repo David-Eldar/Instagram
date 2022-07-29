@@ -1,30 +1,24 @@
 <template>
-<section class="post-details full">
+<section class="post-details column full">
+  <div class="x-btn-container flex">
+    <button>X</button>
+  </div>
   
-  <div class="post-modal flex main-layout-container">
+  <div class="post-modal flex">
 
     <div class="modal-img-container flex">
       <img src="../assets/imgs/post-test-img.jpeg" alt="">
     </div>
 
       <div class="modal-details-container column">
-
-          <div class="modal-header flex">
-
-      <div class="user-img-container flex">
-
-         <user-details :post="post"/>
-
-      </div>
       
-
-       <div class="user-details flex relative">
-        <!-- <h5 class="user-name">UserName</h5> -->
-       </div>
-
-     <div class="meatballs-menu-container flex relative">
-       <button class="meatballs-menu-btn">
-         <i><svg aria-label="More options" 
+      <div class="bottom-border full">
+        <div class="details-header-container flex space-between preview-layout">
+        
+        <user-details :post="post"/>
+        <div class="meatballs-menu-container flex relative">
+          <button class="meatballs-menu-btn">
+             <i><svg aria-label="More options" 
                  class="_ab6-" 
                  color="#262626" 
                  fill="#262626" 
@@ -35,29 +29,29 @@
                  <circle cx="12" cy="12" r="1.5"></circle>
                  <circle cx="6" cy="12" r="1.5"></circle>
                  <circle cx="18" cy="12" r="1.5"></circle>
-         </svg></i>
-       </button>
-     </div>
-
-
-
-
-     
-      </div>
-
-                   <div class="preview-content-container column relative preview-layout">
-         
-
-         <post-content :post="post"/>
-      
-         <post-comments :post="post"/>
-
-         <h6 class="created-at flex">X HOURES AGO</h6>
-      
+             </svg></i>
+          </button>
         </div>
 
+
+        </div>
+      </div>
+  
+   
+
+      <section class="content-container column relative  preview-layout">
+         
+         <post-content :post="post"/>
+         <post-comments :post="post"/>
+         <!-- <post-list :post="post"/> -->
+      </section>
+        
+
+
+      <section class="down-box column top-border full">
           
-               <nav class="preview-icons-nav-bar flex space-between main-layout-container">
+        <div class="preview-layout box-padding">
+         <nav class="preview-icons-nav-bar flex space-between ">
       <ul class="clean-list flex">
         <li><button><svg 
         aria-label="Activity Feed" 
@@ -137,17 +131,22 @@
         </svg>
       </button>
          </nav>
+        
+         <h5 class="likers flex ">likes</h5>
+         <h6 class="created-at flex">X HOURES AGO</h6>
+        </div>
 
-         <post-edit :post="post"/>
-      </div>
-    
-      
+          <div class="top-border full">
+            <post-edit :post="post" class="preview-layout box-padding"/>
+          </div>
+
+        </section>
+
+        </div> 
 
 
-
-
-  </div>
-
+    </div>
+  
 </section>
 </template>
 

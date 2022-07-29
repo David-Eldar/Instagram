@@ -1,12 +1,9 @@
 <template>
   <section class="post-preview column ">
 
-    <div class="user-info flex preview-layout">
-      <div class="user-info-container flex">
-        <user-details :post="post"/>
-
-    </div>
-     <div class="meatballs-menu-container flex relative">
+    <div class="preview-header flex space-between preview-layout">
+      <user-details :post="post"/>
+    <div class="meatballs-menu-container flex relative">
        <button class="meatballs-menu-btn">
          <i><svg aria-label="More options" 
                  class="_ab6-" 
@@ -21,7 +18,8 @@
                  <circle cx="18" cy="12" r="1.5"></circle>
          </svg></i>
        </button>
-     </div>
+    </div>
+     
 
     </div>
 
@@ -29,8 +27,8 @@
       <img src="../assets/imgs/post-test-img.jpeg" alt="">
     </div>
 
-     
-    <nav class="preview-icons-nav-bar flex preview-layout">
+  <div class="content-wrapper box-padding preview-layout">      
+    <nav class="preview-icons-nav-bar flex ">
       <ul class="clean-list flex">
         <li><button><svg 
         aria-label="Activity Feed" 
@@ -111,18 +109,27 @@
       </button>
     </nav>
 
-        <div class="preview-content-container column relative preview-layout">
+        <div class="preview-content-container column relative box-padding">
          <h5 class="likers flex ">likes</h5>
 
-         <post-content :post="post"/>
+    <ul class="post-content flex clean-list">
+       <li class="username">{{ post.by.fullname }}</li>
+       <li class="post-content">{{post.txt}}</li>
+     </ul>
+
+          <router-link :to="'/post/'+ post._id"  ><button class="view-cmts flex">view all comments</button></router-link>
       
-         <post-comments :post="post"/>
+         <!-- <post-comments :post="post"/> -->
 
          <h6 class="created-at flex">X HOURES AGO</h6>
-      
         </div>
 
-          <post-edit :post="post"/>
+        </div>
+
+
+        <div class="top-border box-padding full">
+          <post-edit :post="post" class="preview-layout"/>
+        </div>
     
     
   </section>

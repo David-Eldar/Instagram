@@ -1,13 +1,20 @@
 <template>
   
-    <section class="content-inbox flex relative">
+  <section class="content-inbox flex relative" v-if="post">
         
       
-      <ul class="post flex clean-list" v-if="post">
-        <li class="username">{{ post.by.fullname }}</li>
+     <div class="user-img-ring flex">
+      <div class="user-img-placeholder flex">
+       <img src="../assets/imgs/User-test-img.jpeg" alt="">
+      </div>
+     </div>
+     
+     <ul class="post-content flex clean-list">
+       <li class="username">{{ post.by.fullname }}</li>
        <li class="post-content">{{post.txt}}</li>
-      </ul>
-    </section>
+     </ul>
+
+  </section>
 </template>
 
 <script>

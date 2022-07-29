@@ -2,14 +2,17 @@
   
   <form class="post-comments-cmp-container column relative" v-if="post">
 
-    <router-link :to="'/post/'+ post._id"  ><button class="view-cmts flex">view all comments</button></router-link>
+   
     
-    <ul class="comments flex clean-list">
-      <li class="username flex" v-for="comment in post.comments" :key="comment">
-          {{comment.by.fullname}}
-      <p class="commet">{{comment.txt}}</p>
-    </li>
-       </ul>
+    <div class="comments flex">
+      <div class="user-img-placeholder flex">
+       <img src="../assets/imgs/users-test-img.jpeg" alt="">
+      </div>
+      <h5 class="username flex" v-for="comment in post.comments" :key="comment">
+        {{comment.by.fullname}}
+      <h6 class="commet">{{comment.txt}}</h6>
+     </h5>
+    </div>
 
       
   </form>

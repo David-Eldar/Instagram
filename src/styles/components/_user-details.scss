@@ -1,0 +1,33 @@
+.user-info {
+  padding-top: rem(8px);
+  padding-bottom: rem(8px);
+  height: 60px;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.user-info-container {
+    gap: rem(10px);
+}
+
+.user-details{
+  width: rem(359px);
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: em(8px);
+  margin-bottom: rem(5px);
+  gap: rem(0.5px);
+}
+.username {
+ display: flex;
+ align-items: center;
+ height: fit-content;
+ gap: 5px;
+ font-size: rem(16px);
+ .comment{
+  height: fit-content;
+  display: flex;
+  align-items: center;
+ }
+}

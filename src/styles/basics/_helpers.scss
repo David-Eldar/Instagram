@@ -23,6 +23,11 @@
   align-items: center;
 }
 
+.box-padding {
+  padding-top: rem(6px);
+  padding-bottom: rem(6px);
+}
+
 .flex {
   display: flex;
 }
@@ -50,9 +55,16 @@
 .relative{
   position: relative;
 }
-.row-start{
-  justify-content: flex-start;
+
+
+.top-border{
+  border-top: 1px solid $thinGray;
 }
+.bottom-border{
+  border-bottom: 1px solid $thinGray;
+}
+
+
 
 
 

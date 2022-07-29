@@ -1,10 +1,10 @@
 <template>
   
-  <div class="post-edit-cmp-container flex relative">
+  <section class="post-edit-cmp-container flex relative">
 
  
 
-    <div class="comment-inputbox flex relative preview-layout">
+    <div class="comment-inputbox flex relative">
       
        <button class="emoji-btn flex"><router-link to="post/"></router-link>
         <svg 
@@ -24,7 +24,7 @@
         <button class="post-btn" @click="save">Post</button>
     </div>
       
-  </div>
+  </section>
   
 </template>
 
@@ -48,7 +48,8 @@ export default {
           type: 'savePost',
           post: postCopy,
         })
-        // this.$router.push('/')
+        this.txt = ''
+        this.comment = postService.getEmptyComment()
       },
     },
     computed: {

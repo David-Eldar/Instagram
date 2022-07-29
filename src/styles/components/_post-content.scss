@@ -1,6 +1,6 @@
 .preview-content-container{
    
-  gap: rem(8px);
+  gap: rem(10px);
 }
 
 
@@ -12,23 +12,29 @@
   margin-top: rem(10px);
   margin-bottom: rem(10px);
   height: fit-content;
-  gap: 5px;
+  gap: rem(19px);
 
-  .post {
-    gap: rem(5px);
-    align-items: center;
-    .username{
-      font-weight: bolder;
-    }
-  }  
+
 }
 
+.post-content {
+  gap: rem(5px);
+  align-items: center;
+  font-size: rem(17px);
+  .username{
+    font-weight: bolder;
+    font-size: rem(18px);
+  }
+}  
+
 .view-cmts {
+  font-size: rem(19px);
   color: rgb(141, 140, 140);
 }
 .created-at{
-   margin-top: em(12px);
+   margin-top: em(10px);
+  //  margin-bottom: em(10px);
    color: rgb(147, 144, 144);
    font-weight: 500;
-   font-size: rem(11px);
+   font-size: rem(14px);
  }

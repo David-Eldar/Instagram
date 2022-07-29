@@ -1,35 +1,29 @@
-
-
-
-    .user-img-ring {
-      width: 42px;
-      height: 42px;
-      background: linear-gradient(45deg, $yellow 10%,$yellow_to 20%,$orange 30%,$red 40%,$purple 80%, $blue 100%);  
-      border-radius: 50%;
-      background-color: $bg-grey;
-      align-items: center;
-      justify-content: center;
-
-      .user-img-placeholder {
-        border-radius: 50%;
-        width: 38px;
-        height: 38px;
-        background-color: #fff;
-        align-items: center;
-        justify-content: center;
-        
-        img {
-          padding: rem(2px);
-          object-fit:cover;
-          border-radius: 50%;
-          height: 38px;
-          width: 38px;
-          
-         }
-      }
-    
-
-    }
+ .user-img-ring {
+   width: 42px;
+   height: 42px;
+   background: linear-gradient(45deg, $yellow 0%,$yellow_to 20%,$orange 50%,$red 75%,$purple 90%, $blue 100%);  
+   border-radius: 50%;
+   background-color: $bg-grey;
+   align-items: center;
+   justify-content: center;
+ }
+ .user-img-placeholder {
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+       
+  img {
+   padding: rem(2px);
+   object-fit:cover;
+   border-radius: 50%;
+   height: 38px;
+   width: 38px;
+         
+   }
+ }
 
 
 

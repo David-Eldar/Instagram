@@ -1,0 +1,34 @@
+<template>
+  <section class="comments-list column">
+    <post-comments
+      v-for="post in posts"
+      :key="post._id"
+      :post="post"
+      @remove="removePost"
+    />
+  </section>
+</template>
+<script>
+  import postComments from './post-comments.cmp.vue'
+
+  export default {
+    name: 'postList',
+    props: ['posts'],
+    emits: ['removed', 'showDetails'],
+    components: {
+      postComments,
+    },
+    data() {
+      return {}
+    },
+    created() {},
+    methods: {
+      removePost(projId) {
+        this.$emit('removed', projId)
+      },
+    },
+    computed: {},
+    unmounted() {},
+  }
+</script>
+<style></style>
