@@ -12,8 +12,8 @@
 
       <div class="modal-details-container column">
       
-      <div class="bottom-border full">
-        <div class="details-header-container flex space-between preview-layout">
+      <section class="bottom-border full">
+        <header class="details-header flex space-between preview-layout">
         
         <user-details :post="post"/>
         <div class="meatballs-menu-container flex relative">
@@ -34,21 +34,21 @@
         </div>
 
 
-        </div>
-      </div>
+        </header>
+      </section>
   
    
 
       <section class="content-container column relative  preview-layout">
          
          <post-content :post="post"/>
-         <post-comments :post="post"/>
-         <!-- <post-list :post="post"/> -->
+         <!-- <post-comments :post="post"/> -->
+         <comments-list v-if="posts" :posts="posts"/>
       </section>
         
 
 
-      <section class="down-box column top-border full">
+      <footer class="down-box column top-border full">
           
         <div class="preview-layout box-padding">
          <nav class="preview-icons-nav-bar flex space-between ">
@@ -140,7 +140,7 @@
             <post-edit :post="post" class="preview-layout box-padding"/>
           </div>
 
-        </section>
+        </footer>
 
         </div> 
 
@@ -155,7 +155,8 @@
   import postEdit from '../cmps/post-edit.cmp.vue'
   import userDetails from '../cmps/user-details.cmp.vue'
   import postContent from '../cmps/post-content.cmp.vue'
-  import postComments from '../cmps/post-comments.cmp.vue'
+  // import postComments from '../cmps/post-comments.cmp.vue'
+  import commentsList from '../cmps/comments-list.cmp.vue'
   
   
 
@@ -167,7 +168,8 @@
       userDetails,
       postEdit,
       postContent,
-      postComments
+      // postComments,
+      commentsList
       // testCmo
     },
     data(){
@@ -196,6 +198,9 @@
       //opt 2 use computed for the postId
       postId() {
         return this.$route.params.postId
+      },
+      posts() {
+      return this.$store.getters.posts
       },
     //   showPost() {
     //     console.log(this.post)

@@ -169,7 +169,7 @@ function _createPosts() {
   let posts = JSON.parse(localStorage.getItem(KEY));
   if (!posts || !posts.length) {
     posts = []
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 30; i++) {
       posts.push(_createPost())
     }
     localStorage.setItem(KEY, JSON.stringify(posts));
