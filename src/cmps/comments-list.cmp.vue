@@ -1,5 +1,6 @@
 <template>
   <section class="comments-list column">
+    <post-content v-if="post"/>
     <post-comments
       v-for="post in posts"
       :key="post._id"
@@ -10,6 +11,7 @@
 </template>
 <script>
   import postComments from './post-comments.cmp.vue'
+  import postContent from './post-content.cmp.vue'
 
   export default {
     name: 'postList',
@@ -17,6 +19,7 @@
     emits: ['removed', 'showDetails'],
     components: {
       postComments,
+      postContent,
     },
     data() {
       return {}

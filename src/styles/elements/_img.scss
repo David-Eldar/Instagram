@@ -7,6 +7,7 @@
    align-items: center;
    justify-content: center;
  }
+
  .user-img-placeholder {
   border-radius: 50%;
   width: 38px;
@@ -30,16 +31,16 @@
 .modal-img-container {
     display: flex;
     align-items: center;
-    background-color: black;
-    width: 402px;
     position: relative;
-    flex-basis: 306;
+    background-color: black;
+    // width: 402px;
+    // flex-basis: 306;
     padding: rem(38px) 0 rem(38px) 0;
     img{
         display: flex;
         position:relative;
-        width: 402px;
-        height: 503px;
+        // width: 402px;
+        // height: 503px;
         object-fit: cover;
         flex-shrink: 1;
         flex-grow: 2;

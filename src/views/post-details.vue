@@ -1,19 +1,20 @@
 <template>
 <section class="post-details column full">
-  <div class="x-btn-container flex">
+
+  <div class="post-modal-box">
+    <div class="x-btn-container flex">
     <button>X</button>
-  </div>
-  
+    </div>
   <div class="post-modal flex">
 
     <div class="modal-img-container flex">
       <img src="../assets/imgs/post-test-img.jpeg" alt="">
     </div>
 
-      <div class="modal-details-container column">
+      <div class="modal-details-container">
       
       <section class="bottom-border full">
-        <header class="details-header flex space-between preview-layout">
+        <header class="details-header flex space-between details-layout">
         
         <user-details :post="post"/>
         <div class="meatballs-menu-container flex relative">
@@ -39,18 +40,18 @@
   
    
 
-      <section class="content-container column relative  preview-layout">
+      
          
-         <post-content :post="post"/>
+         
          <!-- <post-comments :post="post"/> -->
-         <comments-list v-if="posts" :posts="posts"/>
-      </section>
+         <comments-list v-if="posts" :posts="posts" class="content-container"/>
+      
         
 
 
-      <footer class="down-box column top-border full">
+      <section class="details-footer column top-border full">
           
-        <div class="preview-layout box-padding">
+        <div class="main-layout-container main-box-layout">
          <nav class="preview-icons-nav-bar flex space-between ">
       <ul class="clean-list flex">
         <li><button><svg 
@@ -137,16 +138,16 @@
         </div>
 
           <div class="top-border full">
-            <post-edit :post="post" class="preview-layout box-padding"/>
+            <post-edit :post="post" class="details-layout box-padding"/>
           </div>
 
-        </footer>
+        </section>
 
         </div> 
 
-
     </div>
   
+  </div>
 </section>
 </template>
 

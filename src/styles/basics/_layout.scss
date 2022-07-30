@@ -55,14 +55,23 @@
 }
 
 .main-layout-container {
-  // margin-top: rem(30px);
+
   margin-inline-start: rem(20px);
   margin-inline-end: rem(20px);
+}
+.main-box-layout{
+  margin-block-start: rem(10px);
+  margin-block-end: rem(10px);
 }
 
 .preview-layout{
   margin-inline-start: $previewLayout;
   margin-inline-end: $previewLayout;
+}
+
+.details-layout {
+  margin-inline-start: rem(15px);
+  margin-inline-end: rem(15px);
 }
 
 

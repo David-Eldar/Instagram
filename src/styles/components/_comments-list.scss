@@ -1,0 +1,30 @@
+// .comments-list {
+//     align-items: flex-start;
+//     justify-content: space-between;
+//     gap: 30px;
+//     flex-grow: 1;
+//     position: absolute;
+//     vertical-align: baseline;
+//     box-sizing: content-box;
+
+    
+//     overflow-y: scroll;
+//   }
+
+
+.comments-list {
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  height: rem(381px);
+  margin-inline-start: 12px;
+    // flex-grow: 1;
+    // position: absolute;
+    // vertical-align: baseline;
+    // box-sizing: content-box;
+
+    
+    overflow-y: auto
+}
+
+  
