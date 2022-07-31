@@ -94,7 +94,8 @@ export const postService = {
   remove,
   save,
   getEmptyPost,
-  getEmptyComment
+  getEmptyComment,
+  getNewEmptyPost
 };
 
 _createPosts();
@@ -144,13 +145,27 @@ function getEmptyPost() {
   //   reviews: ['good', 'great', 'fine'],
   // };
 }
+function getNewEmptyPost() {
+  const copy = JSON.parse(JSON.stringify(story))
+  copy.txt = "newwwwwwwwwwwww asfasdfasd"
+  delete copy._id
+  console.log('copy:',copy?._id)
+  return copy
+  // return {
+  //   _id: '',
+  //   name,
+  //   price,
+  //   createdAt: Date.now(),
+  //   reviews: ['good', 'great', 'fine'],
+  // };
+}
 
 function getEmptyComment(){
   return  {
-    "id": "c1001",
+    "id": "1023",
     "by": {
       "_id": "u105",
-      "fullname": "Bob",
+      "fullname": "his wife",
       "imgUrl": "http://some-img"
     },
     "txt": "good one!",

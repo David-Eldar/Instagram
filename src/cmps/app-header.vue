@@ -44,6 +44,7 @@
         </svg>
 
         <svg 
+        @click="openModal"
         aria-label="New post" 
         class="_ab6-" 
         color="#262626" 
@@ -117,19 +118,29 @@
     </header>
       <!-- <hr class="under-line full">     -->
   </section>
+
+  <add-modal v-if="showModal"/>
 </template>
 <script>
-import postFilter from '../cmps/post-filter.vue'
+import postFilter from '../cmps/post-filter.cmp.vue'
+import addModal from '../cmps/add-modal.cmp.vue'
   export default {
     name: 'AppHeader',
     components: {
       postFilter,
+      addModal
     },
     data() {
-      return {}
+      return {
+        showModal:false
+      }
     },
     created() {},
-    methods: {},
+    methods: {
+      openModal(){
+        this.showModal = true
+      }
+    },
     computed: {},
     unmounted() {},
   }

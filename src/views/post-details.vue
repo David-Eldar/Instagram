@@ -1,5 +1,5 @@
 <template>
-<section class="popup">
+<section>
 
   <div class="post-modal-container flex">
 

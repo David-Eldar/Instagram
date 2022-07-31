@@ -9,9 +9,9 @@
 
       <user-details :post="post"/>
     <div class="meatballs-menu-container flex relative">
-      <button class="delete-btn">Delete</button>
-       <!-- <nav class="meatballs-menu-btn flex">
-         <button @click="testbtn"><svg aria-label="More options" 
+      <!-- <button class="delete-btn">Delete</button> -->
+       <nav class="meatballs-menu-btn flex">
+         <button @click="openMenu"><svg aria-label="More options" 
                  class="_ab6-" 
                  color="#262626" 
                  fill="#262626" 
@@ -24,7 +24,7 @@
                  <circle cx="18" cy="12" r="1.5"></circle>
          </svg>
          </button>
-       </nav> -->
+       </nav>
     </div>
      
 
@@ -119,14 +119,16 @@
         <div class="preview-content-container column relative box-padding">
          <h5 class="likers flex ">likes</h5>
 
-    <ul class="post-content flex clean-list">
+    <!-- <ul class="post-content flex clean-list">
        <li class="username">{{ post.by.fullname }}</li>
        <li class="post-content">{{post.txt}}</li>
-     </ul>
+     </ul> -->
 
-          <router-link :to="'/post/'+ post._id"  ><button class="view-cmts flex">view all comments</button></router-link>
+        <post-content :post="post"/>
+
+          <button class="view-cmts flex" @click="openModal">view all comments</button>
       
-         <!-- <post-comments :post="post"/> -->
+         <post-comments :post="post"/>
 
          <h6 class="created-at flex">X HOURES AGO</h6>
         </div>
@@ -141,8 +143,16 @@
     
   </section>
    
-   <!-- <menu-modal v-if="showModal"/> -->
+   <section class="popup" v-if="showMenu" @click="closeMenu">
+   <menu-modal :post="post" @click="showMenu = true"/>
+   </section>
 
+   <section class="popup" v-if="showModal">
+   <post-details :post="post" />
+   <button class="modal-close-btn" @click="showModal=false">X</button>
+   </section>
+   
+   
 </template>
 <script>
   
@@ -152,6 +162,7 @@
   import postContent from './post-content.cmp.vue'
   import postComments from './post-comments.cmp.vue'
   import menuModal from './menu-modal.cmp.vue'
+  import postDetails from '../views/post-details.vue'
 
   export default {
     name: 'postPreview',
@@ -162,19 +173,30 @@
       postEdit,
       postContent,
       postComments,
-      menuModal
+      menuModal,
+      postDetails,
       // testCmo
     },
     data() {
       
       return {
-       showModal:true
+       showMenu:false,
+       showModal: false
       }
     },
     created() {},
     methods: {
-      testbtn(){
-        console.log('working?');
+      openMenu(){
+        this.showMenu = true
+      },
+      closeMenu (){
+        this.showMenu = false
+      },
+      openModal(){
+        this.showModal = true
+      },
+      colseModal(){
+        this.showModal = false
       }
       // check (){
       //   console.log(showModal);

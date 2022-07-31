@@ -1,6 +1,6 @@
 <template>
   
-  <form class="post-comments-cmp-container column relative" v-if="post">
+  <form class="post-comments-cmp-container flex relative" v-if="post">
 
    
     
