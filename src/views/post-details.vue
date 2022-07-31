@@ -1,20 +1,17 @@
 <template>
-<section class="post-details column full">
+<section class="popup">
 
-  <div class="post-modal-box">
-    <div class="x-btn-container flex">
-    <button>X</button>
-    </div>
-  <div class="post-modal flex">
+  <div class="post-modal-container flex">
 
-    <div class="modal-img-container flex">
+    <div class="modal-img-container flex relative">
       <img src="../assets/imgs/post-test-img.jpeg" alt="">
     </div>
 
-      <div class="modal-details-container">
+      <div class="modal-details-container column relative">
       
-      <section class="bottom-border full">
-        <header class="details-header flex space-between details-layout">
+       <section class="headr-box flex relative bottom-border full">
+
+        <header class="preview-header flex space-between details-layout">
         
         <user-details :post="post"/>
         <div class="meatballs-menu-container flex relative">
@@ -37,19 +34,14 @@
 
         </header>
       </section>
-  
-   
 
-      
+      <section class="content-box column relative">
          
-         
-         <!-- <post-comments :post="post"/> -->
-         <comments-list v-if="posts" :posts="posts" class="content-container"/>
-      
-        
+         <comments-list v-if="posts" :posts="posts"/>
+      </section>
 
-
-      <section class="details-footer column top-border full">
+       
+      <section class="details-footer column flex relative top-border full">
           
         <div class="main-layout-container main-box-layout">
          <nav class="preview-icons-nav-bar flex space-between ">
@@ -141,13 +133,13 @@
             <post-edit :post="post" class="details-layout box-padding"/>
           </div>
 
-        </section>
+        </section>  
 
         </div> 
 
     </div>
   
-  </div>
+  
 </section>
 </template>
 
@@ -156,7 +148,6 @@
   import postEdit from '../cmps/post-edit.cmp.vue'
   import userDetails from '../cmps/user-details.cmp.vue'
   import postContent from '../cmps/post-content.cmp.vue'
-  // import postComments from '../cmps/post-comments.cmp.vue'
   import commentsList from '../cmps/comments-list.cmp.vue'
   
   
@@ -169,9 +160,8 @@
       userDetails,
       postEdit,
       postContent,
-      // postComments,
       commentsList
-      // testCmo
+      
     },
     data(){
       return {
@@ -230,6 +220,10 @@
   }
 
 </script>
+
+<style>
+
+</style>
 
 
 

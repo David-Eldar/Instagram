@@ -1,27 +1,30 @@
 <template>
-  <main class="main-layout-container">
-  <section>
-    <!-- <post-filter /> -->
-  </section>
-  <post-list @removed="removePost" v-if="posts" :posts="posts" />
+  <main>
+  
+   <app-header />
+   
+    
+    <post-list @removed="removePost" v-if="posts" :posts="posts" />
 
-   <post-details class="post-details"/>
+  <!-- <post-details/> -->
 
   </main>
 </template>
 
 <script>
+  import appHeader from '../cmps/app-header.vue' 
   import postList from '../cmps/post-list.cmp.vue'
   import postEdit from '../views/post-edit.vue'
   import postDetails from '../views/post-details.vue'
   
 
   export default {
-    name: 'postApp',
+    name: 'PostApp',
     components: {
       postList,
       postEdit,
       postDetails,
+      appHeader
     },
     data() {
       return {}

@@ -1,11 +1,17 @@
 <template>
+
+  <!-- <button class="test" v-on:click="showModal = true" >test</button> -->
   <section class="post-preview column ">
 
-    <div class="preview-header flex space-between preview-layout">
+    
+
+    <header class="preview-header flex space-between preview-layout">
+
       <user-details :post="post"/>
     <div class="meatballs-menu-container flex relative">
-       <button class="meatballs-menu-btn">
-         <i><svg aria-label="More options" 
+      <button class="delete-btn">Delete</button>
+       <!-- <nav class="meatballs-menu-btn flex">
+         <button @click="testbtn"><svg aria-label="More options" 
                  class="_ab6-" 
                  color="#262626" 
                  fill="#262626" 
@@ -16,12 +22,13 @@
                  <circle cx="12" cy="12" r="1.5"></circle>
                  <circle cx="6" cy="12" r="1.5"></circle>
                  <circle cx="18" cy="12" r="1.5"></circle>
-         </svg></i>
-       </button>
+         </svg>
+         </button>
+       </nav> -->
     </div>
      
 
-    </div>
+    </header>
 
      <div class="post-img-placholder flex relative">
       <img src="../assets/imgs/post-test-img.jpeg" alt="">
@@ -133,6 +140,9 @@
     
     
   </section>
+   
+   <!-- <menu-modal v-if="showModal"/> -->
+
 </template>
 <script>
   
@@ -141,28 +151,42 @@
   import postEdit from './post-edit.cmp.vue'
   import postContent from './post-content.cmp.vue'
   import postComments from './post-comments.cmp.vue'
+  import menuModal from './menu-modal.cmp.vue'
 
   export default {
     name: 'postPreview',
     props: ['post'],
-    // emits: ['remove'],
+    emits: ['remove'],
     components: {
       userDetails,
       postEdit,
       postContent,
-      postComments
+      postComments,
+      menuModal
       // testCmo
     },
     data() {
-      return {}
+      
+      return {
+       showModal:true
+      }
     },
     created() {},
     methods: {
+      testbtn(){
+        console.log('working?');
+      }
+      // check (){
+      //   console.log(showModal);
+      // }
       // removePost() {
       //   this.$emit('remove', this.post._id)
       // },
     },
     computed: {
+      // testbtn(){
+      //   console.log('working?');
+      // }
       // formatPrice() {
       //   return (this.post.price + '').slice(0, 1)
       // },
@@ -170,3 +194,10 @@
     unmounted() {},
   }
 </script>
+
+<style>
+.test{
+  width: 10px;
+  border-radius: 3px solid black;
+}
+</style>
