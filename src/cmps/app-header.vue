@@ -119,7 +119,10 @@
       <!-- <hr class="under-line full">     -->
   </section>
 
-  <add-modal v-if="showModal"/>
+  <section class="popup flex" v-if="showModal">
+    <add-modal />
+  <button class="modal-close-btn" @click="showModal=false">X</button>
+  </section>
 </template>
 <script>
 import postFilter from '../cmps/post-filter.cmp.vue'

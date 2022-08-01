@@ -1,3 +1,15 @@
+export const utilService = {
+  makeId,
+  getRandomInt,
+  debounce,
+  loadFromStorage,
+  saveToStorage,
+  loadFromSessionStorage,
+  saveToSessionStorage,
+}
+
+
+// UTILS
 
 function makeId(length = 5) {
     var txt = '';
@@ -17,13 +29,33 @@ function debounce(func, timeout = 300){
   }
 
 function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
-  }
-
-export const utilService = {
-    makeId,
-    getRandomInt,
-    debounce
+ min = Math.ceil(min);
+ max = Math.floor(max);
+ return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
 }
+
+
+
+
+
+// STORAGE SERVICE 
+
+function loadFromStorage(key) {
+  var val = localStorage.getItem(key)
+  return val ? JSON.parse(val) : null
+}
+
+function saveToStorage(key, val) {
+  localStorage[key] = JSON.stringify(val)
+}
+
+function loadFromSessionStorage(key) {
+  var val = sessionStorage.getItem(key)
+  return val ? JSON.parse(val) : null
+}
+
+function saveToSessionStorage(key, val) {
+  sessionStorage[key] = JSON.stringify(val)
+}
+
+

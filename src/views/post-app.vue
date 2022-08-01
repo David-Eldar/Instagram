@@ -2,9 +2,7 @@
   <main>
   
    <app-header />
-   
-    
-    <post-list @removed="removePost" v-if="posts" :posts="posts" />
+   <post-list @removed="removePost" v-if="posts" :posts="posts" />
 
   <!-- <post-details/> -->
 
@@ -15,7 +13,7 @@
   import appHeader from '../cmps/app-header.vue' 
   import postList from '../cmps/post-list.cmp.vue'
   import postEdit from '../views/post-edit.vue'
-  import postDetails from '../views/post-details.vue'
+  
   
 
   export default {
@@ -23,7 +21,6 @@
     components: {
       postList,
       postEdit,
-      postDetails,
       appHeader
     },
     data() {
