@@ -1,7 +1,7 @@
 <template>
 
   <!-- <button class="test" v-on:click="showModal = true" >test</button> -->
-  <section class="post-preview column ">
+  <section class="post-preview column " v-if="post">
 
     
 
@@ -9,7 +9,7 @@
 
       <user-details :post="post"/>
     <div class="meatballs-menu-container flex relative">
-      <!-- <button class="delete-btn">Delete</button> -->
+      
        <nav class="meatballs-menu-btn flex">
          <button @click="openMenu"><svg aria-label="More options" 
                  class="_ab6-" 
@@ -31,7 +31,8 @@
     </header>
 
      <div class="post-img-placholder flex relative">
-      <img src="../assets/imgs/post-test-img.jpeg" alt="">
+      <!-- <img src="../assets/imgs/post-test-img.jpeg" alt=""> -->
+      <img :src="post.imgUrl" alt="">
     </div>
 
   <div class="content-wrapper box-padding preview-layout">      
@@ -124,11 +125,11 @@
        <li class="post-content">{{post.txt}}</li>
      </ul> -->
 
-        <post-content :post="post"/>
+        <post-content v-if="post" :post="post"/>
 
           <button class="view-cmts flex" @click="openModal">view all comments</button>
       
-         <post-comments :post="post"/>
+         <post-comments v-if="post" :post="post"/>
 
          <h6 class="created-at flex">X HOURES AGO</h6>
         </div>
@@ -143,12 +144,14 @@
     
   </section>
    
-   <section class="popup" v-if="showMenu" @click="closeMenu">
-   <menu-modal :post="post" @click="showMenu = true"/>
+   <section class="popup" v-if="showMenu">
+  
+   <menu-modal v-if="post" :post="post" @click="showMenu = true"/>
+   <button class="modal-close-btn" @click="closeMenu">X</button>
    </section>
 
    <section class="popup" v-if="showModal">
-   <post-details :post="post" />
+   <post-details v-if="post" :post="post" />
    <button class="modal-close-btn" @click="showModal=false">X</button>
    </section>
    

@@ -2,6 +2,8 @@ export const utilService = {
   makeId,
   getRandomInt,
   debounce,
+  getRandomColor,
+  getLoremIpsum,
   loadFromStorage,
   saveToStorage,
   loadFromSessionStorage,
@@ -32,6 +34,57 @@ function getRandomInt(min, max) {
  min = Math.ceil(min);
  max = Math.floor(max);
  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+}
+
+function getLoremIpsum(length = 5) {
+  const words = [
+    'The sky',
+    'above',
+    'the port',
+    'was',
+    'the color of television',
+    'tuned',
+    'to',
+    'a dead channel',
+    '.',
+    'All',
+    'this happened',
+    'more or less',
+    '.',
+    'I',
+    'had',
+    'the story',
+    'bit by bit',
+    'from various people',
+    'and',
+    'as generally',
+    'happens',
+    'in such cases',
+    'each time',
+    'it',
+    'was',
+    'a different story',
+    '.',
+    'It',
+    'was',
+    'a pleasure',
+    'to',
+    'burn',
+  ]
+  let sentence = ''
+  while (length > 0) {
+    sentence += words[getRandomInt(0, words.length - 1)] + ' '
+    length--
+  }
+  return sentence.trim()
+}
+
+function getRandomColor() {
+  var color = '#'
+  for (var i = 0; i < 6; i++) {
+    color += Math.floor(Math.random() * 10)
+  }
+  return color
 }
 
 

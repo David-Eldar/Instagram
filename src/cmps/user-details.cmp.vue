@@ -5,7 +5,8 @@
       <div class="user-info-container flex">
         <div class="user-img-ring flex">
          <div class="user-img-placeholder flex">
-      <img src="../assets/imgs/User-test-img.jpeg" alt="">
+      <!-- <img src="../assets/imgs/User-test-img.jpeg" alt=""> -->
+      <img :src="post.by.imgUrl" alt="">
      </div>
     </div>
     <div class="user-details column relative">

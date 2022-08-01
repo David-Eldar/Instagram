@@ -11,9 +11,10 @@
       
        <section class="headr-box flex relative bottom-border full">
 
-        <header class="preview-header flex space-between details-layout">
+        <header class="details-header flex space-between details-layout">
         
-        <user-details :post="post"/>
+        <user-details v-if="post" :post="post"/>
+        
         <div class="meatballs-menu-container flex relative">
           <button class="meatballs-menu-btn">
              <i><svg aria-label="More options" 
@@ -35,8 +36,8 @@
         </header>
       </section>
 
-      <section class="content-box column relative">
-         
+      <section class="content-box column relative preview-layout">
+         <post-content v-if="post" :post="post"/> 
          <comments-list v-if="posts" :posts="posts"/>
       </section>
 
@@ -130,7 +131,7 @@
         </div>
 
           <div class="top-border full">
-            <post-edit :post="post" class="details-layout box-padding"/>
+            <post-edit v-if="post" :post="post" class="details-layout box-padding"/>
           </div>
 
         </section>  
@@ -149,12 +150,13 @@
   import userDetails from '../cmps/user-details.cmp.vue'
   import postContent from '../cmps/post-content.cmp.vue'
   import commentsList from '../cmps/comments-list.cmp.vue'
+// import { postService } from '../services/post.service.js'
   
   
 
   export default {
     name: 'postDetails',
-    props: ['post'],
+    props:['post'],
     // emits: ['remove'],
     components: {
       userDetails,
@@ -165,20 +167,21 @@
     },
     data(){
       return {
-        post:null
+        // post:null
       }
     },
     created() {
-      this.loadPost()
+      console.log('this.post:',this.post)
+      // this.loadPost()
     },
     methods: {
       async loadPost() {
-        if (!this.postId) return // prevent the run of the watcher when change route
-        const post = await this.$store.dispatch({
-          type: 'getPostById',
-          postId: this.postId,
-        })
-        this.post = post
+        // if (!this.postId) return // prevent the run of the watcher when change route
+        // const post = await this.$store.dispatch({
+        //   type: 'getPostById',
+        //   postId: this.postId,
+        // })
+        // this.post = post || postService.getEmptyPost()
         // this.isShow = true
       },
       // closeModal() {

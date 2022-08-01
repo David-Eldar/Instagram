@@ -1,5 +1,5 @@
-// import { postService } from '../../services/post.service.js';
-import { postService } from '../../services/post-service.js';
+import { postService } from '../../services/post.service.js';
+// import { postService } from '../../services/post-service.js';
 
 export default {
   state: {

@@ -1,6 +1,6 @@
 <template>
   <section class="comments-list column">
-    <post-content v-if="post"/>
+    <post-content v-if="post" />
     <post-comments
       v-for="post in posts"
       :key="post._id"

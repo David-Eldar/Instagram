@@ -6,11 +6,11 @@
     
     <div class="comments flex">
       <div class="user-img-placeholder flex">
-       <img src="../assets/imgs/users-test-img.jpeg" alt="">
+       <!-- <img src="../assets/imgs/users-test-img.jpeg" alt=""> -->
       </div>
       <h5 class="username flex" v-for="comment in post.comments" :key="comment">
         {{comment.by.fullname}}
-      <h6 class="commet">{{comment.txt}}</h6>
+      <h6 class="comment">{{comment.txt}}</h6>
      </h5>
     </div>
 

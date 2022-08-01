@@ -2,7 +2,7 @@
     <section>
       <div class="menu-modal-wraper column">
         <div class="menu-modal-container column">
-       <button class="delete-btn" @click="removrePost">Delete</button>
+       <button class="delete-btn" @click="removePost">Delete</button>
        <button>Edit</button>
        
       </div>

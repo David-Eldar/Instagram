@@ -1,11 +1,13 @@
 <template>
   
-  <section class="content-inbox flex relative" v-if="post">
+  <section class="content-inbox flex relative " v-if="post">
         
       
      <div class="user-img-ring flex">
       <div class="user-img-placeholder flex">
        <img src="../assets/imgs/User-test-img.jpeg" alt="">
+       
+
       </div>
      </div>
      
